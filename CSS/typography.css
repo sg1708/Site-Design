@@ -1,0 +1,30 @@
+
+/* main body typography */
+body {
+  font-family: 'Inria-serif', serif;
+}
+
+/* nav bar typogography */
+.nav-links button,
+.nav-links span {
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Inria-serif', serif;
+}
+
+
+/* individual body typography */
+.hero h2 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 1em;
+}

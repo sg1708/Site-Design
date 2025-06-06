@@ -4,18 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Designer Timber Furniture</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/colours.css">
+
 </head>
+
 <body>
 
-    <header>
-        <h1>Designer Timber Furniture</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="product.html">Shop</a>
-            <a href="cart.html">Cart</a>
-        </nav>
+    <!--Navigation Bar-->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Designer Timber Furniture logo">
+        </a>
+        
+    <nav class="nav-links">
+        <button id="searchBtn"><img src="images/search-icon.png" alt="Search"></button>
+        <span>About Us</span>
+        <button id="productsBtn" class="products-btn">
+            <span class="products-text">Products</span>
+            <img src="images/arrow-down.svg" alt="dropdown arrow" class="arrow-icon">
+          </button>
+        <span>Contact Us</span>
+        <span>Clearance</span>
+        <button><img src="images/account-icon.png" alt="Account"></button>
+        <button id="cartBtn"><img src="images/cart-icon.png" alt="Cart"></button>
+    </nav>
+
+    <!-- Popups for nav. -->
+  <div id="searchPopup" class="popup hidden">
+    <input type="text" placeholder="Search for products...">
+  </div>
+
+  <div id="productsPopup" class="popup hidden">
+    <ul>
+      <li><a href="#">Dining</a></li>
+      <li><a href="#">Living</a></li>
+      <li><a href="#">Bedroom</a></li>
+    </ul>
+  </div>
+
+  <div id="cartPopup" class="cart-popup hidden">
+    <p>Your cart is empty.</p>
+  </div>
+
     </header>
+    
 
     <main>
         <section class="hero">
@@ -34,9 +68,12 @@
         </section>
     </main>
 
+
     <footer>
         <p>&copy; 2025 Designer Timber Furniture</p>
     </footer>
-    
+
 </body>
+
+
 </html>
