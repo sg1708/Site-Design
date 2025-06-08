@@ -27,7 +27,6 @@
 }
 
 
-
 /* ========== NAVBAR ICONS & TEXT ========== */
 /* logo positioning */
 .logo img {
@@ -40,6 +39,11 @@
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+.products-btn {
+  display: flex;
+  align-items: center;
 }
 
 /* text typography */
@@ -62,11 +66,6 @@
   height: 20px;
 }
 
-.products-btn {
-  display: flex;
-  align-items: center;
-}
-
 
 .arrow-icon {
   vertical-align: middle; 
@@ -82,14 +81,14 @@
   background-color: white;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 3px;
   width: 100%;
   height: 52px;
   display: flex;
   align-items: center;
 
   justify-content: center;
-  padding: 0 20px;
+
   z-index: 9999;
 
   /* start hidden search above screen */
@@ -106,8 +105,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
   gap: 3px;
-  max-width: 650px;
+  max-width: 600px;
   width: 100%;
   box-sizing: border-box;
 
@@ -162,6 +162,8 @@
 
   position: relative;
   top: -4px;
+  flex-shrink: 0;
+
 
 }
 
@@ -242,7 +244,9 @@ body.dimmed::before {
   position: fixed;
   
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.25); /* 25% black overlay */
+
+  /* 25% black overlay */
+  background-color: rgba(0, 0, 0, 0.25); 
   z-index: 800;
 
 }
@@ -289,7 +293,7 @@ body.dimmed {
 
 
 /* Divider between cart message and button */
-.cart-divider {
+.divider {
   width: 100%;
   border: none;
   border-top: 1px solid black;
@@ -439,9 +443,10 @@ body.dimmed {
 /* Mobile layout (≤ 768px) */
 @media (max-width: 768px) {
 
-  /* ajust navbar */
+  /* ajust NAVBAR */
   .nav-links, .products-popup {
-    display: none; /* Hide the desktop nav */
+    /* Hide the desktop & products nav */
+    display: none; 
   }
 
 
@@ -491,7 +496,7 @@ body.dimmed {
   }
 
 
-  /* popups for navbar, side menu */
+  /* popups for navbar, SIDE MENU */
   .side-menu {
     position: fixed;
     top: 0;
@@ -507,7 +512,8 @@ body.dimmed {
     transform: translateX(-100%);
     transition: transform 0.3s ease;
 
-    overflow-y: auto; /* allows scrolling inside menu */
+    /* allows scrolling inside menu */
+    overflow-y: auto; 
   }
 
   .side-menu.show {
@@ -519,7 +525,6 @@ body.dimmed {
     padding: 0;
     margin-top: 60px;
 
-
   }
 
   .side-menu li {
@@ -528,6 +533,7 @@ body.dimmed {
 
   .side-menu .products-toggle {
     background: none;
+    color: black;
     border: none;
     font-size: 16px;
     font-family: 'inria-serif';
@@ -545,12 +551,12 @@ body.dimmed {
     font-size: 16px;
   }
 
-
-  .arrow-right {
+  .arrow {
     height: 20px;
   }
+
   
-  /* Products Overlay */
+  /* PRODUCTS OVERLAY */
   .mobile-products-overlay {
     position: fixed;
     top: 0;
@@ -562,34 +568,100 @@ body.dimmed {
     padding: 70px 20px;
     transform: translateX(100%);
     transition: transform 0.3s ease;
-
-  
   }
   
   .mobile-products-overlay.show {
     transform: translateX(0);
   }
 
+
+  /* Back button inside products overlay */
+  .back-to-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-family: 'Inria-serif', serif;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+
+  /* Divider */
+  .divider {
+    width: 90%;
+    margin: 10px 0 20px;
+  }
+
+  /* Product grid layout */
+  .mobile-products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  /* Each category column */
+  .mobile-column {
+    flex: 1 1 45%;
+    min-width: 140px;
+  }
+
+  .mobile-column h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .mobile-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-column li {
+    margin-bottom: 6px;
+  }
+
+  .mobile-column a {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+  }
+
+  /* CART OVERLAY */
+  .cart-popup {
+    width: 100%;                
+    box-sizing: border-box;
+  }
+
+  .cart-close {
+    top: 10px;
+    right: 15px;
+  }
+
+
   /* no scrolling when overlays open */
   body.no-scroll {
     overflow: hidden;
     height: 100%;
   }
-  
-  /* Close button 
-  .close-menu {
-    background: none;
-    border: none;
-    font-size: 30px;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-  } */
-
 
 }
 
+@media (max-width: 900px) {
+
+  /* FOOTER */
+
+  .footer-logo {
+    display: none;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
 
 /* ========== RESPONSIVENESS FOR DESKTOP (hide items on mobile) ========== */
 /* Desktop layout (> 768px) */
@@ -601,5 +673,4 @@ body.dimmed {
   .mobile-products-overlay {
     display: none;
   }
-
 }

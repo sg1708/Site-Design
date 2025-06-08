@@ -10,10 +10,264 @@
 
 
 </head>
+
 <body>
+
+  <!--NAVIGATION BAR-->
+  <header class="navbar">
+
+       <!-- left part of bar with menu & logo(mobile) -->
+      <div class="navbar-left">
+          <button id="menuToggle" class="menu-icon">
+              <img id="menuIcon" src="images/filter-icon.svg" alt="Menu">
+              
+          </button>
+
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Designer Timber Furniture logo">
+          </a>
+        </div>
+      
+      <!--Desktop nav links-->
+      
+      <nav class="nav-links">
+          <button id="searchBtn"><img src="images/search-icon.png" alt="Search"></button>
+          <span class="nav-label">About Us</span>
+
+          <button id="productsBtn" class="products-btn">
+              <span class="products-text">Products</span>
+              <img src="images/arrow-down.svg" alt="dropdown arrow" class="arrow-icon">
+          </button>
+
+          <span class="nav-label">Contact Us</span>
+          <span class="nav-label">Clearance</span>
+
+          <button><img src="images/account-icon.png" alt="Account"></button>
+
+          <button id="cartBtn"><img src="images/cart-icon.png" alt="Cart"></button>
+      </nav>
+
+
+      <!-- Right-side icons for mobile -->
+      <div class="mobile-icons">
+          <button id="searchBtnMobile"><img src="images/search-icon.png" alt="Search"></button>
+          <button><img src="images/account-icon.png" alt="Account"></button>
+          <button id="cartBtnMobile"><img src="images/cart-icon.png" alt="Cart"></button>
+      </div>
+
+  </header>
+  
+
+  <!-- POPUPS for nav. desktop/mobile-->
+   <!--search bar-->
+  <div id="searchOverlay" class="search-overlay">
+      <div class="search-bar-group">
+          <div class="search-container">
+              <input type="text" placeholder="Search" id="searchInput">
+              <button id="searchGo" class="icon-button">
+                  <img src="images/search-icon.png" alt="Search">
+              </button>
+          </div>
+
+          <button id="searchClose" class="close-button">×</button>
+      </div>
+      
+  </div>
+
+
+  <!--products bar and individual categories -->
+  <div id="productsPopup" class="products-popup hidden">
+      <div class="column">
+          <h4>Office</h4>
+          <ul>
+            <li><a href="#">Coffee Tables</a></li>
+            <li><a href="#">Desks</a></li>
+            <li><a href="#">Chairs</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <a href="products1.html" class="column-link"><h4>Bedroom</h4></a>
+          <ul>
+            <li><a href="#">Beds</a></li>
+            <li><a href="#">Mattresses</a></li>
+            <li><a href="#">Tables</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Living Room</h4>
+          <ul>
+            <li><a href="#">Sofas</a></li>
+            <li><a href="#">Bookshelves</a></li>
+            <li><a href="#">Coffee Tables</a></li>
+            <li><a href="#">Buffets</a></li>
+            <li><a href="#">Bar Stools</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Outdoor</h4>
+          <ul>
+            <li><a href="#">Entertainment</a></li>
+            <li><a href="#">Veranda</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Australian Made</h4>
+          <ul>
+            <li><a href="#">Australian Made</a></li>
+            <li><a href="#">Other Items</a></li>
+          </ul>
+        </div>
+
+  </div>
+  
+
+  <!--empty cart bar-->
+  <div id="cartPopup" class="cart-popup">
+      <button id="closeCart" class="cart-close">×</button>
+      <h2>Your Cart is Empty</h2>
+      <hr class="divider">
+      <a href="explorecollec.html" class="btn">Return to Shop</a>
+  </div>
+
+
+  <!-- POPUPS for nav. mobile-->
+  <!-- Side menu overlay -->
+  <div id="sideMenu" class="side-menu">
+      <ul>
+          <li><a href="#">About Us</a></li>
+          <li>
+              <button class="products-toggle">
+                Products <img src="images/arrow-right.svg" alt="Arrow Right" class="arrow">
+              </button>
+          </li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Clearance</a></li>
+      </ul>
+  </div>
+
+  <!-- Mobile products submenu overlay -->
+  <div id="mobileProductsOverlay" class="mobile-products-overlay">
+
+      <button id="backToMenu" class="back-to-menu">
+          <img src="images/arrow-left.svg" alt="Back"class="arrow"> Products
+        </button>
+      
+      <hr class="divider">
+      
+      <div class="mobile-products-grid">
+          <div class="mobile-column">
+              <h4>Office</h4>
+              <ul>
+                  <li><a href="#">Coffee Tables</a></li>
+                  <li><a href="#">Desks</a></li>
+                  <li><a href="#">Chairs</a></li>
+              </ul>
+          </div>
+
+          <div class="mobile-column">
+              <a href="products1.html" class="column-link"><h4>Bedroom</h4></a>
+              <ul>
+                  <li><a href="#">Beds</a></li>
+                  <li><a href="#">Mattresses</a></li>
+                  <li><a href="#">Tables</a></li>
+              </ul>
+          </div>
+          <div class="mobile-column">
+              <h4>Living Room</h4>
+              <ul>
+                  <li><a href="#">Sofas</a></li>
+                  <li><a href="#">Bookshelves</a></li>
+                  <li><a href="#">Coffee Tables</a></li>
+                  <li><a href="#">Buffets</a></li>
+                  <li><a href="#">Bar Stools</a></li>
+              </ul>
+          </div>
+
+          <div class="mobile-column">
+              <h4>Outdoor</h4>
+              <ul>
+                  <li><a href="#">Entertainment</a></li>
+                  <li><a href="#">Veranda</a></li>
+              </ul>
+          </div>
+
+          <div class="mobile-column">
+              <h4>Australian Made</h4>
+              <ul>
+                  <li><a href="#">Australian Made</a></li>
+                  <li><a href="#">Other Items</a></li>
+              </ul>
+          </div>
+
+      </div>
+  </div>
+
+
+
+
   <h1>Your Cart</h1>
   <p>1x Timber Dining Table — $1,200</p>
   <a href="checkout.html" class="btn">Proceed to Checkout</a>
+
+
+
+  <!-- FOOTER SECTION -->
+  <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+        <img src="images/logo2.png" alt="Designer Timber Furniture logo">
+        </div>
+    
+        <div class="footer-links">
+            <h4>Australian Made Furniture</h4>
+            <ul>
+                <li><a href="#">Bespoke Designs</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-links">
+            <h4>Customer Care</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-links">
+            <h4>Products</h4>
+            <ul>
+                <li><a href="#">Office</a></li>
+                <li><a href="products1.html">Bedroom</a></li>
+                <li><a href="#">Living Room</a></li>
+                <li><a href="#">Outdoor</a></li>
+                <li><a href="#">Australian Made</a></li>
+            </ul>
+        </div>
+
+    
+        <div class="footer-contact">
+
+            <h4>Contact Us</h4>
+
+            <div class="footer-socials">
+                <a href="https://www.facebook.com" target="_blank"><img src="images/facebook-icon.svg" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="images/instagram-icon.svg" alt="Instagram"></a>
+            </div>
+        
+            <p><span class="footer-icon"> ⚲</span>146 Bell Street, Preston, VIC</p>
+            <p><span class="footer-icon">✆</span><a href="tel:+61123456789">(03) 9415 1404</a></p>
+            <p><span class="footer-icon"> ✉</span><a href="mailto:info@designertimber.com">info@designertimber.com</a></p>
+
+        </div>
+
+    </div>
+        
+    <div class="footer-bottom">
+        <p>&copy; 2025 Designer Timber Furniture. All rights reserved.</p>
+    </div>
+
+  </footer>
+
 
   <script src="Java/main.js"></script>
   <script src="Java/navbar.js"></script>
