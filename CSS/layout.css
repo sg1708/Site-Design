@@ -1,4 +1,5 @@
 
+/* ========== MAIN BODY LAYOUT ========== */
 body {
   margin: 0;
   padding: 0;
@@ -6,87 +7,7 @@ body {
 }
 
 
-/* Navbar base */
-.navbar {
-  height: 32px;
-  margin: 0 auto; 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  position: relative;
-  padding-left: 0;
-
-}
-
-/* logo positioning */
-.logo img {
-  height: 93px;
-  padding-top: 8px;
-}
-
-/* text placement */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-/* icons placement */
-.nav-links button img {
-  height: 20px;
-}
-
-.products-btn {
-  display: flex;
-  align-items: center;
-}
-
-.products-text {
-  display: inline-block;
-
-}
-
-.arrow-icon {
-  vertical-align: middle; 
-  margin-left: 4px;
-  top: 2px;
-}
-
-
-/* Popups for nav bar */
-.popup {
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  background: white;
-  color: black;
-  border: 1px solid #ccc;
-  padding: 10px;
-  z-index: 999;
-
-}
-
-.popup input {
-  width: 200px;
-  padding: 5px;
-}
-
-
-.cart-popup {
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background: white;
-  color: black;
-  border: 1px solid #ccc;
-  padding: 10px;
-  width: 250px;
-  z-index: 999;
-}
-
-
-/* main body alignment */
+/* ========== MAIN BODY ALIGNMENT ========== */
 .hero {
   text-align: center;
   padding: 3em 1em;
@@ -110,20 +31,8 @@ body {
 }
 
 
-.hidden {
-  display: none;
-}
 
-
-/* footer positioning */
-footer {
-  padding: 1em;
-  text-align: center;
-}
-
-
-
-/* responsive design */
+/* ========== RESPONSIVE DESIGN ========== */
 
 @media screen and (max-width: 600px) {
   .nav-links {

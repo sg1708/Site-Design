@@ -1,19 +1,13 @@
 
-/* nav bar colouring */
-.navbar {
-  background-color: #EEEEEE;
-  color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-/* buttons colouring */
+/* ========== BUTTONS COLOURING ========== */
 .btn {
   background: #E2A66A;
   color: white;
   padding: 10px 20px;
 }
 
-/* main body sections */
+/* ========== MAIN BODY SECTIONS ========== */
 .hero {
   background-color: #E6E4D8;
 }
@@ -22,9 +16,3 @@
   background: #ddd;
 }
 
-
-/* footer colouring */
-footer {
-  background: #5F5241;
-  color: white;
-}
