@@ -130,6 +130,10 @@
   border-radius: 20px;
   font-family: 'Inria-serif', serif;
   outline: none;
+
+  min-width: 0;
+  flex: 1;
+  
 }
 
 /* Search icon inside the input */
@@ -493,6 +497,10 @@ body.dimmed {
 
   }
 
+  .close-button {
+    font-size: 28px;
+  }
+
 
   /* popups for navbar, SIDE MENU */
   .side-menu {
@@ -586,12 +594,14 @@ body.dimmed {
     padding: 10px 0;
     cursor: pointer;
   }
-
+ 
   /* Divider */
-  .divider {
-    
+  .mobile-products-overlay .divider {
+    width: 90%;
     margin: 10px 0 20px;
   }
+
+ 
 
   /* Product grid layout */
   .mobile-products-grid {

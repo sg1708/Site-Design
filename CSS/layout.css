@@ -14,18 +14,21 @@ main {
 
 html, body {
   overflow-x: hidden;
+
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
   line-height: 1.6;
-}
 
+}
+/*
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
+*/
 
 
 .mainComponent{
@@ -297,20 +300,24 @@ a.category-btn {
 
 /* Arrows */
 .testimonial-arrow {
+  position: absolute;
+  top: 50%;
+  
   background: none;
   border: none;
   font-size: 2.5rem;
   cursor: pointer;
-  color: #888;
-  transition: color 0.2s ease;
+
+  z-index: 5;
+
 }
 
 .testimonial-arrow.left {
-  margin-right: 20px;
+  left: 10px;
 }
 
 .testimonial-arrow.right {
-  margin-left: 20px;
+  right: 10px;
 }
 
 
@@ -357,9 +364,11 @@ a.category-btn {
     padding: 50px 30px;
   
   }
+  /*
   .gallery-arrow {
     display: none;
   }
+  */
 
   /* scrolling adjusted */
   .gallery-scroll {
@@ -410,11 +419,11 @@ a.category-btn {
 
   /* change arrows margin */
   .testimonial-arrow.left {
-    margin-right: 1px;
+    left: 5px;
   }
 
   .testimonial-arrow.right {
-    margin-left: 1px;
+    right: 5px;
   }
 
 }
