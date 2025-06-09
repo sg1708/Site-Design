@@ -1,9 +1,10 @@
 
 /* ========== MAIN BODY LAYOUT ========== */
+/*
 body {
   line-height: 1.6;
-  margin: 0;
 }
+*/
 
 /* space to accomodate for nav bar */
 main {
@@ -13,17 +14,19 @@ main {
 
 html, body {
   overflow-x: hidden;
-}
-
-
-
-
-html, body {
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
+  line-height: 1.6;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 .mainComponent{
   flex: 1;
