@@ -133,7 +133,7 @@
 
   min-width: 0;
   flex: 1;
-  
+
 }
 
 /* Search icon inside the input */
@@ -497,9 +497,18 @@ body.dimmed {
 
   }
 
-  .close-button {
-    font-size: 28px;
+  /* IDKKK */
+  .cart-close {
+    
+    right: 15px;
   }
+
+  /*
+  .cart-popup {
+    padding: 20px 20px 20px 20px;
+  }
+  */
+
 
 
   /* popups for navbar, SIDE MENU */
