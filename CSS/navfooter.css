@@ -498,16 +498,13 @@ body.dimmed {
   }
 
   /* IDKKK */
-  .cart-close {
-    
-    right: 15px;
-  }
 
-  /*
+
+  
   .cart-popup {
     padding: 20px 20px 20px 20px;
   }
-  */
+  
 
 
 
@@ -650,6 +647,7 @@ body.dimmed {
   .cart-popup {
     width: 100%;                
     box-sizing: border-box;
+    
   }
 
   .cart-close {
