@@ -80,7 +80,6 @@
 .search-overlay {
   background-color: white;
   position: fixed;
-  top: 0;
   left: 3px;
   width: 100%;
   height: 52px;
@@ -106,7 +105,6 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  gap: 3px;
   max-width: 600px;
   width: 100%;
   box-sizing: border-box;
@@ -172,7 +170,7 @@
 
 /* ========== PRODUCTS OVERLAY ========== */
 .products-popup {
-  position: absolute;
+  position: fixed;
 
   top: 5%;
   left: 0;
@@ -577,6 +575,7 @@ body.dimmed {
 
   /* Back button inside products overlay */
   .back-to-menu {
+    color: black;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -590,7 +589,7 @@ body.dimmed {
 
   /* Divider */
   .divider {
-    width: 90%;
+    
     margin: 10px 0 20px;
   }
 

@@ -1,76 +1,447 @@
 
 /* ========== MAIN BODY LAYOUT ========== */
 body {
-  margin: 0;
-  padding: 0;
   line-height: 1.6;
+}
+
+/* space to accomodate for nav bar */
+main {
+  padding-top: 40px; 
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainComponent{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 
 /* ========== HOMEPAGE ========== */
 /* ========== MAIN BODY ALIGNMENT ========== */
-.hero {
-  text-align: center;
-  padding: 3em 1em;
-}
 
-.categories {
-  padding: 2em;
-  text-align: center;
-}
-
-.category-grid {
+/* HEADER IMAGE */
+.header {
+  position: relative;
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 0 30px;
+
+}
+
+/* explore collection button */
+.header-cta {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icon next to button */
+.header-icon {
+  height: 50px;
+  
+}
+
+
+
+/* CATEGORIES */
+/* text placement */
+.categories {
+  text-align: center;
+  padding: 0px 30px 100px;
+}
+
+
+/* grid placement */
+.categories-grid {
+  display: grid;
+  /* have three equal columns  */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
+/* category Box layout */
+.category-box {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 2em;
+  height: 280px;
+
 }
 
-.category {
-  padding: 2em;
-  width: 100px;
-  border-radius: 6px;
+/* Taller australian made box */
+.category-box-tall {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 580px;
+
+
+}
+
+/* Overlay text alignment(on categories) */
+.category-overlay {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
-/* ========== RESPONSIVENESS ========== */
+/* Categories 'shop now' buttons */
+.category-btn {
+  padding: 10px 40px;
+  border-radius: 20px;
+  cursor: pointer;
 
-@media screen and (max-width: 600px) {
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 12px;
-  }
+}
 
-  .popup input {
-    width: 100%;
-  }
+a.category-btn {
+  padding: 7px 40px;
+
 }
 
 
-@media screen and (min-width: 1024px) {
-  .hero h2 {
-    font-size: 36px;
+/* WHY CHOOSE SECTION */
+/* Header row: side by side layout */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+/* text placement */
+.header-row h1 {
+  flex: 40%;
+  margin: 0;
+  text-align: left;
+}
+
+.header-row .subtext {
+  margin: 0;
+  max-width: 40%;
+}
+
+
+/* why choose - features placement */
+.why-features {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.why-feature {
+  flex: 1;
+  min-width: 240px;
+  text-align: left;
+}
+
+.why-icon {
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+
+
+/* GALLERY SECTION  */
+/* gallery layout */
+.gallery-section {
+  padding: 100px 50px 50px;
+
+}
+
+.gallery-section .header-row {
+  margin-bottom: 50px;
+}
+
+
+/* Scrollable image area */
+.gallery-container {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.gallery-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 2rem;
+  scroll-snap-type: x mandatory;
+
+}
+
+
+/* Individual gallery items */
+.gallery-item {
+  min-width: 250px;
+  /* make gallery images fit frame */
+  flex: 0 0 30%;
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+/* size of each image */
+.gallery-item img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  height: 300px; 
+  object-fit: cover; 
+}
+
+
+/* Gallery arrows */
+.gallery-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.3);
+  border: none;
+  font-size: 1rem;
+
+  cursor: pointer;
+
+}
+.gallery-arrow.left {
+  left: 10px;
+}
+.gallery-arrow.right {
+  right: 10px;
+}
+
+
+
+
+/* TESTIMONIALS SECTION */
+/* header text placement */
+.testimonials-section {
+  text-align: center;
+  padding: 0px 30px 100px;
+}
+
+
+/* Main testimonials layout */
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonial-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Testimonials image layout */
+.testimonial-image img {
+  width: 400px;
+  height: 400px;
+  max-width: 400px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid black;
+}
+
+/* Arrows */
+.testimonial-arrow {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.testimonial-arrow.left {
+  margin-right: 20px;
+}
+
+.testimonial-arrow.right {
+  margin-left: 20px;
+}
+
+
+
+
+/* ========== RESPONSIVENESS FOR MOBILE ========== */
+
+@media (max-width: 768px) {
+
+  /* CATEGORIES */
+  /* Category grid mobile layout */
+
+  .categories-grid {
+    /* have one column */
+    grid-template-columns: 1fr;
+  }
+   
+  .category-box-tall {
+    grid-column: auto;
+    grid-row: auto;
   }
 
-  .category-grid {
+  .category-box, .category-box-tall {
+    height: 250px;
+  }
+
+
+  /* WHY CHOOSE SECTION */
+  /* text placement modified (directly under one another) */
+  .header-row .subtext {
+    text-align: left;
+    min-width: 100%;
+  }
+
+  .why-features {
+    display: block;
+
+  }
+
+
+  /* GALLERY SECTION  */
+  /* background padding */
+  .gallery-section {
+    padding: 50px 30px;
+  
+  }
+  .gallery-arrow {
+    display: none;
+  }
+
+  /* scrolling adjusted */
+  .gallery-scroll {
+    /* padding: 10px 20px; */
+    gap: 0.8rem;
+  }
+
+  /* gallery images fit frame differently */
+  .gallery-item {
+    flex: 0 0 70%; 
+    min-width: 0;
+  }
+
+  /* smaller image size */
+  .gallery-item img {
+    height: 180px; 
+  }
+
+
+
+  /* TESTIMONIALS SECTION */
+  /* change layout gap */
+  .testimonial-container {
     flex-direction: row;
-    justify-content: center;
+    gap: 10px;
+
   }
 
-  .btn {
-    padding: 15px 30px;
-    font-size: 18px;
+  /* gap between image and text */
+  .testimonial-slide {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
   }
+
+  /* Image size reduce */
+  .testimonial-image img {
+    width: 140px;
+    height: 250px;
+
+  }
+
+  /* arrow sizing */
+  .testimonial-arrow {
+    position: relative;
+  }
+
+  /* change arrows margin */
+  .testimonial-arrow.left {
+    margin-right: 1px;
+  }
+
+  .testimonial-arrow.right {
+    margin-left: 1px;
+  }
+
 }
+
+
+/*
+@media screen and (min-width: 1024px) {
+ 
+  
+} */
+
+
+
+
 
 
 
 /* ========== EXPLORE COLLECTIONS ========== */
 
+/* page divider */
+.page-divider .divider {
+  margin: auto;
+  width: 90%;
+ 
+}
+
+/* ========== RESPONSIVENESS FOR MOBILE ========== */
+
+
+
+
 
 
 
 /* ========== PRODUCTS 1 PAGE ========== */
+
+
+/* ========== RESPONSIVENESS FOR MOBILE ========== */
 
 
 

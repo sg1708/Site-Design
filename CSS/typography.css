@@ -5,13 +5,20 @@ body {
 }
 
 
-/* ========== HOMEPAGE ========== */
-/* ========== INDIVIDUAL BODY TYPOGRAPHY ========== */
-.hero h2 {
-  font-size: 24px;
-  text-align: center;
+/* title and paragraph */
+.title {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
+p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+
+
+/* ========== BUTTONS TYPOGRAPHY ========== */
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -19,8 +26,101 @@ body {
   font-size: 20px;
 
   border-radius: 25px;
-  margin-top: 1em;
+
 }
+
+
+/* ========== HOMEPAGE ========== */
+/* ========== INDIVIDUAL BODY TYPOGRAPHY ========== */
+
+/* HEADER IMAGE */
+/* Main headline text */
+.header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 250px 0px;
+  line-height: 1.3;
+  max-width: 70%
+
+}
+
+/* CATEGORIES */
+
+/* Text on categories */
+.category-overlay h4 {
+  color: white;
+  font-weight: lighter;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Categories 'shop now' buttons */
+.category-btn {
+  font-size: 1rem;
+  font-family: 'inder';
+  text-decoration: none;
+}
+
+
+/* WHY CHOOSE SECTION */
+/* why choose - features text */
+
+.why-feature h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+
+/* GALLERY SECTION  */
+/* text under gallery images */
+.gallery-label {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  display: block;
+}
+
+
+/* TESTIMONIALS SECTION */
+/* testimonials quote text */
+.testimonial-quote {
+  flex: 1;
+  text-align: left;
+  font-size: 3rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.testimonial-quote h5 {
+  font-weight: normal;
+}
+
+
+
+/* ========== RESPONSIVENESS FOR MOBILE ========== */
+
+@media (max-width: 768px) {
+
+  /* HEADER IMAGE */
+  /* headline text mobile */
+  .header h1 {
+    font-size: 2.5rem;
+    max-width: 80%;
+    margin: 100px 0px 150px 0px;
+    
+  }
+
+  /* TESTIMONIALS SECTION */
+  /* Change quote size */
+  .testimonial-quote {
+    flex: 1;
+    font-size: 1.2rem;
+    text-align: left;
+    width: 90px;
+  }
+
+
+}
+
 
 /* ========== RESPONSIVENESS ========== */
 

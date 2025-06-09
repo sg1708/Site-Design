@@ -1,24 +1,117 @@
 
+/* ========== MAIN BODY COLOUR ========== */
+body {
+  background: #E6E4D8;
+  color: rgb(0, 0, 0);
+}
+
 
 /* ========== BUTTONS COLOURING ========== */
 .btn {
   background: #E2A66A;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 40px;
 }
+
+.btn:hover {
+  background-color: #a47738;
+}
+
 
 /* ========== HOMEPAGE ========== */
 /* ========== MAIN BODY SECTIONS ========== */
-.hero {
+
+/* HEADER IMAGE */
+/* header background */
+.header {
+  background-image: url('../images/header.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+
+}
+
+/* text outlining */
+.header h1 {
+  -webkit-text-stroke: 1px #E7CFB3; 
+  text-shadow: 1px 1px 2px rgba(50, 47, 47, 0.556); 
+  
+}
+
+
+/* CATEGORIES */
+/* Overlay blurring(on categories) */
+.category-overlay {
+  background: rgba(85, 83, 60, 0.324); /* translucent overlay */
+  backdrop-filter: blur(1px);
+}
+
+/* Categories 'shop now' buttons */
+.category-btn {
   background-color: #E6E4D8;
+  color: rgb(0, 0, 0);
+  border: none;
 }
 
-.category {
-  background: #ddd;
+.category-btn:hover {
+  background-color: #d1cbc2;
+}
+
+
+/* WHY CHOOSE SECTION */
+/* why choose background */
+.why-choose {
+  background-image: url('../images/wood-bg.jpg'); 
+  background-size: cover;
+  background-position: center;
+  padding: 100px 50px 50px;
+}
+
+
+/* GALLERY SECTION  */
+/* scrollars */
+.gallery-scroll::-webkit-scrollbar {
+  height: 8px;
+  background: #CCC3BA;
+  border-radius: 4px;
+}
+.gallery-scroll::-webkit-scrollbar-thumb {
+  background: #E2A66A;
+  border-radius: 4px;
 }
 
 
 
+
+
+
+/* ========== RESPONSIVENESS FOR MOBILE ========== */
+
+@media (max-width: 500px) {
+
+  /* HEADER IMAGE */
+  .header {
+    /* Zoom in the background */
+    background-size: 200%; 
+    background-position: center top; 
+  }
+
+  /* WHY CHOOSE SECTION */
+  /* background padding */
+  .why-choose {
+    padding: 50px 30px;
+  }
+  
+
+
+
+
+}
+
+@media (max-width: 768px) {
+
+
+}
 
 
 /* ========== EXPLORE COLLECTIONS ========== */
