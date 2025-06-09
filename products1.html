@@ -203,14 +203,66 @@
     </div>
   </div>
 
-
+  <!-- main body section -->
+  
   <main>
-    
-    <h1>Timber Dining Table</h1>
-    <img src="https://via.placeholder.com/300" alt="Timber Table">
-    <p>Beautiful handcrafted dining table made from Australian hardwood.</p>
-    <p>$1,200</p>
-    <button onclick="addToCart()">Add to Cart</button>
+
+    <div class="small-nav">
+      <a href="index.html">Home</a> >
+      <a href="products1.html">Bedroom</a>
+
+    </div>
+  
+    <h1 class="title">Bedroom</h1>
+  
+    <div class="products-layout">
+      <!-- Sidebar Filters -->
+      <aside class="filters">
+        <h4>Availability</h4>
+        <label><input type="checkbox"> In Stock</label><br>
+        <label><input type="checkbox"> Out of Stock</label>
+  
+        <h4>Product Type</h4>
+        <label><input type="checkbox"> Beds</label><br>
+        <label><input type="checkbox"> Tables</label><br>
+        <label><input type="checkbox"> Bookshelves</label>
+  
+        <h4>Price</h4>
+        <label>From <input type="number" placeholder="0"></label>
+        <label>To <input type="number" placeholder="10000"></label>
+  
+        <button class="btn">Apply</button>
+      </aside>
+  
+      <!-- Product Grid -->
+      <section class="products-grid">
+        <div class="product-card">
+          <img src="images/bed1.jpg" alt="Queen Bed">
+          <h4>Copenhagen - Queen Bed</h4>
+          <p>$1,199.00</p>
+          <small>American Walnut</small>
+        </div>
+  
+        <div class="product-card">
+          <img src="images/table1.jpg" alt="Bedside Table">
+          <h4>Ashmore - Bedside Table</h4>
+          <p>$599.00</p>
+          <small>Vic Ash Timber</small>
+        </div>
+  
+        <!-- Add more product cards here -->
+  
+      </section>
+    </div>
+  
+    <!-- Pagination -->
+    <div class="pagination">
+      <button>&laquo;</button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>&raquo;</button>
+    </div>
 
   </main>
 
