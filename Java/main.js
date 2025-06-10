@@ -1,8 +1,8 @@
 
-// Wait for the entire HTML document to finish loading before running the script
+
+/* ========== HOMEPAGE ========== */
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ========== HOMEPAGE ========== */
   // GALLERY SCROLLING 
   const galleryScroll = document.querySelector('.gallery-scroll');
   const leftArrow = document.querySelector('.gallery-arrow.left');
@@ -60,11 +60,78 @@ document.addEventListener('DOMContentLoaded', () => {
     showTestimonial(current);
   });
 
+});
 
 
 
 
-   /* ========== INDIVIDUAL PRODUCT PAGE ========== */
+/* ========== PRODUCTS 1 PAGE ========== */
+document.addEventListener('DOMContentLoaded', () => {
+
+  // OPEN SORT BY
+  const sortToggle = document.getElementById('sortToggle');
+  const sortOptions = document.getElementById('sortOptions');
+
+  sortToggle.addEventListener('click', () => {
+    sortOptions.classList.toggle('hidden');
+  });
+
+
+
+  // SORT FILTERS (ON MOBILE & DESKTOP)
+  // Select all the headers that control the filters 
+  const filterHeaders = document.querySelectorAll('.filter-header');
+
+  // Loop through each header
+  filterHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+
+      const filterName = header.dataset.filter;
+      const filterOptions = document.querySelectorAll(`[data-filter-options= "${filterName}"]`);
+      const arrow = header.querySelector('img');
+
+      // Toggle visibility for each matching filter options section
+      filterOptions.forEach(option => {
+        option.classList.toggle('hidden-filter');
+      });
+
+      // Toggle arrow direction
+      if (filterOptions[0].classList.contains('hidden-filter')) {
+        arrow.src = 'images/arrow-down.svg';
+      } else {
+        arrow.src = 'images/arrow-up.svg';
+      }
+    });
+
+  });
+
+
+
+  // OPEN/CLOSE FILTER BUTTON (MOBILE)
+  const openFilter = document.getElementById('openFilter');
+  const closeFilter = document.getElementById('closeFilter');
+  const mobileFilterOverlay = document.getElementById('mobileFilterOverlay');
+
+  openFilter.addEventListener('click', () => {
+    mobileFilterOverlay.classList.add('show');
+    document.body.classList.add('no-scroll');
+  });
+
+  closeFilter.addEventListener('click', () => {
+    mobileFilterOverlay.classList.remove('show');
+    document.body.classList.remove('no-scroll');
+  });
+
+
+});
+
+
+
+/* ========== PRODUCT 2 PAGE ========== */
+
+
+
+/* ========== INDIVIDUAL PRODUCT PAGE ========== */
 
   // This function is used on the PRODUCT PAGE
   // When "Add to Cart" is clicked, it shows an alert box
@@ -73,4 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-});
+
+  /* ========== CART PAGE ========== */
+
+
+
+  /* ========== CHECKOUT PAGE ========== */

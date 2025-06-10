@@ -64,11 +64,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Toggle the visibility of the Products popup when "Products" is clicked
 
   const popup = document.getElementById('productsPopup');
+  const arrow = productsBtn.querySelector('.arrow-icon');
+
   
   if (productsBtn) {
     productsBtn.addEventListener('click', () => {
       const NowHidden = popup.classList.toggle('hidden');
       document.body.classList.toggle('dimmed', !NowHidden);
+
+      // Toggle arrow
+      if (popup.classList.contains('hidden')) {
+        arrow.src = 'images/arrow-down.svg';
+      } else {
+        arrow.src = 'images/arrow-up.svg';
+      }
+
     });
   }
 
@@ -112,6 +122,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close only if click is outside both popup and navbar
     if (!ClickInsidePopup && !ClickInsideNavbar) {
       popup.classList.add('hidden');
+
+      // Toggle arrow
+      if (popup.classList.contains('hidden')) {
+        arrow.src = 'images/arrow-down.svg';
+      } else {
+        arrow.src = 'images/arrow-up.svg';
+      }
 
     }
 

@@ -18,6 +18,8 @@ p {
 
 
 
+
+
 /* ========== BUTTONS TYPOGRAPHY ========== */
 .btn {
   display: inline-block;
@@ -129,6 +131,60 @@ p {
 
 /* ========== EXPLORE COLLECTIONS ========== */
 
+/* SMALL NAV at top */
+.small-nav a {
+  color: black;
+  font-size: 16px;
+  font-family: 'Inria-serif', serif;
+  cursor: pointer;
+}
+
+
+/* SORT BY button */
+.sort-btn {
+  background: none;
+  border: 1px solid black;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-family: 'Inria-serif', serif;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+/* RESET ALL (desktop) */
+.reset-all {
+  font-size: 14px;
+  color: #555;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-block-start: 1em;
+}
+
+/* PRODUCTS */
+/* main product link */
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  color: #000;
+}
+
+.product-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ========== RESPONSIVENESS FOR MOBILE ========== */
+
+/* Mobile FILTER BUTTON */
+
+.filter-btn {
+
+  font-family: 'Inria-serif', serif;
+  font-size: 16px;
+  cursor: pointer;
+}
 
 
 

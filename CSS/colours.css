@@ -114,12 +114,126 @@ body {
 }
 
 
+
 /* ========== EXPLORE COLLECTIONS ========== */
 
 
 
 
+
 /* ========== PRODUCTS 1 PAGE ========== */
+
+/* SORT BY button hover colour */
+
+.sort-btn:hover {
+  background: #CCC3BA;
+}
+
+/* hidden sort options */
+.sort-options {
+  background: white;
+  border: 1px solid #CCC3BA;
+
+}
+
+.sort-options p:hover {
+  background: #e7ddd495;
+}
+
+
+/* RESET ALL (desktop) */
+.reset-all:hover {
+  color: #000;
+}
+
+
+/* SIDE BAR FILTERS */
+/* filters tick */
+.filter-options input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: 1px solid black;
+  background: white;
+
+}
+
+.filters input[type="checkbox"]:checked {
+  background-color: black;
+}
+
+
+
+/* scrollbar for product type */
+[data-filter-options="producttype"]::-webkit-scrollbar {
+  width: 6px;
+  background: #CCC3BA;
+  border-radius: 4px;
+
+}
+[data-filter-options="producttype"]::-webkit-scrollbar-thumb {
+  background: #E2A66A;
+  border-radius: 4px;
+}
+
+
+
+
+/* PRODUCTS */
+
+.product-card strike {
+  color: #948A80;
+}
+
+/* main product link */
+/* Zoom hover effect for specific product */
+.product-link img {
+  transition: transform 0.3s ease;
+}
+
+.product-link:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+
+/* product dots */
+
+.product-dots span {
+  background: #D9D9D9;
+  
+}
+
+.product-dots span.active {
+  background: #E2A66A;
+}
+
+
+/* BOTTOM PAGE change */
+
+.pages button:hover {
+  background-color: #CCC3BA;
+  border: none;
+}
+
+.pages button.active {
+  background: #CCC3BA;
+  border: none;
+}
+
+
+
+/* Mobile FILTER BUTTON */
+
+.filter-btn {
+  background:#D6D5D5;
+
+  border: 1px solid black;
+
+}
+
+
 
 
 
