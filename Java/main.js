@@ -257,6 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
         let newIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+
         updateMainImage(newIndex);
       });
     }
@@ -278,6 +279,10 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ========== CART PAGE ========== */
 
 
+
+
+
+  
 
   /* ========== CHECKOUT PAGE ========== */
 

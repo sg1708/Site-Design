@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cart</title>
   <link rel="stylesheet" href="CSS/layout.css">
   <link rel="stylesheet" href="CSS/typography.css">
@@ -121,13 +122,52 @@
   </div>
   
 
-  <!--empty cart bar-->
-  <div id="cartPopup" class="cart-popup">
-      <button id="closeCart" class="cart-close">×</button>
-      <h2>Your Cart is Empty</h2>
-      <hr class="divider">
-      <a href="explorecollec.html" class="btn">Return to Shop</a>
-  </div>
+   <!--filled cart bar -->
+   <div id="cartPopup" class="cart-popup">
+
+    <button id="closeCart" class="cart-close">×</button>
+    <h2>In Your Cart (1)</h2>
+    <hr class="divider">
+  
+    <div class="cart-item">
+      <img src="images/bed2.jpg" alt="Paddington Bed" class="cart-thumb">
+      <div class="cart-item-details">
+        <h4>Paddington - King/Queen Bed</h4>
+        <p>$1,199.00 - 1,299.00</p>
+
+        <div class="cart-controls">
+          <div class="cart-quantity">
+            <button id="cartMinus" class="qty-btn">−</button>
+            <span id="cartQty">1</span>
+            <button id="cartPlus" class="qty-btn">+</button>
+          </div>
+          <button class="remove-btn">REMOVE</button>
+        </div>
+
+      </div>
+    </div>
+  
+    <hr class="divider">
+    
+    <div class="cart-footer">
+        <div class="discount-row">
+        <span>Discount:</span>
+        <button class="discount-btn">ADD</button>
+        </div>
+    
+        <div class="total-row">
+        <span>Total:</span>
+        <span class="cart-total-price">$1,199.00</span>
+        </div>
+
+    
+        <a href="cart.html" class="btn">
+        <img src="images/lock-icon.svg" alt="Lock" class="lock-icon"> Secure Checkout
+        </a>
+
+    </div>
+
+</div>
 
 
   <!-- POPUPS for nav. mobile-->
@@ -214,25 +254,24 @@
       <div class="cart-content">
     
         <!-- Left: Cart Items -->
-        <div class="cart-item">
-          <img src="images/bed2.jpg" alt="Paddington Bed" class="cart-thumb">
-          <div class="cart-details">
-            <div class="cart-text">
+        <div class="cart-page-item">
+          <img src="images/bed2.jpg" alt="Paddington Bed" class="cart-page-thumb">
+          <div class="cart-page-details">
+            <div class="cart-page-text">
               <h4>Paddington - King/Queen Bed</h4>
               <p class="subtitle">Australian Blackbutt Timber</p>
-              <div class="cart-controls">
-                <div class="cart-quantity">
+              <div class="cart-page-controls">
+                <div class="cart-page-quantity">
                   <button class="qty-btn">−</button>
                   <span>1</span>
                   <button class="qty-btn">+</button>
                 </div>
-                <button class="remove-btn">Remove</button>
+                <button class="remove-btn">REMOVE</button>
               </div>
             </div>
-            <div class="cart-price">$1,199.00</div>
+            <div class="cart-page-price">$1,199.00</div>
           </div>
         </div>
-        <hr>
         
     
         <!-- Right: Order Summary -->
@@ -248,7 +287,7 @@
           </div>
           <hr>
           <a href="checkout.html" class="checkout-btn">
-            <img src="images/lock-icon.svg" alt="Lock" class="lock-icon"> Proceed to Checkout
+             Proceed to Checkout
           </a>
         </div>
     
