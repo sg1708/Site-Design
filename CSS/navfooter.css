@@ -255,6 +255,7 @@ body.dimmed::before {
 
 body.dimmed {
   overflow: hidden;
+  
 }
 
 
@@ -265,13 +266,13 @@ body.dimmed {
   position: fixed;
   top: 0;
   right: 0;
-  width: 18%;
+  width: 20%;
   height: 100%;
 
   background: white;
   color: black;
   
-  padding: 0px 20px 20px 20px;
+  padding: 0px 20px 0px 20px;
 
   display: flex;
 
@@ -323,10 +324,13 @@ body.dimmed {
 .cart-popup .btn {
   margin-top: initial;
   width: 100%;
-  display: inline-block;
+  display: flex;
   padding: 10px 0;
   text-align: center;
-  
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 
@@ -496,14 +500,7 @@ body.dimmed {
     height: 20px;
 
   }
-
-  /* IDKKK */
-
-
   
-  .cart-popup {
-    padding: 20px 20px 20px 20px;
-  }
   
 
 
@@ -644,17 +641,6 @@ body.dimmed {
     text-decoration: none;
   }
 
-  /* CART OVERLAY */
-  .cart-popup {
-    width: 100%;                
-    box-sizing: border-box;
-    
-  }
-
-  .cart-close {
-    top: 10px;
-    right: 15px;
-  }
 
 
   /* no scrolling when overlays open */
@@ -664,6 +650,25 @@ body.dimmed {
   }
 
 }
+
+
+@media (max-width: 1200px) {
+
+  /* CART OVERLAY */
+  .cart-popup {
+    width: 100%;                
+    box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+    
+  }
+
+  .cart-close {
+    top: 10px;
+    right: 15px;
+  }
+}
+
+
 
 @media (max-width: 900px) {
 

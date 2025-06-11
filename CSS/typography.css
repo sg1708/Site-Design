@@ -124,12 +124,11 @@ p {
 }
 
 
-/* ========== RESPONSIVENESS ========== */
 
 
 
+/* ========== PRODUCTS 1 PAGE ========== */
 
-/* ========== EXPLORE COLLECTIONS ========== */
 
 /* SMALL NAV at top */
 .small-nav a {
@@ -149,6 +148,7 @@ p {
   font-family: 'Inria-serif', serif;
   cursor: pointer;
   font-size: 16px;
+  color: #000;
 }
 
 
@@ -180,7 +180,7 @@ p {
 /* Mobile FILTER BUTTON */
 
 .filter-btn {
-
+  color: black;
   font-family: 'Inria-serif', serif;
   font-size: 16px;
   cursor: pointer;
@@ -188,22 +188,55 @@ p {
 
 
 
-/* ========== PRODUCTS 1 PAGE ========== */
-
-
 
 
 /* ========== PRODUCTS 2 PAGE ========== */
+
+/* SEARCH RESULTS title */
+
+.search-results-header h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Inria-serif', serif;
+}
+
+/* SEARCH RESULTS bar */
+/* search result text */
+.search-term {
+  font-family: 'Inria-serif', serif;
+  font-size: 16px;
+  color: #77736fea ;
+}
+
 
 
 
 /* ========== PRODUCT PAGE ========== */
 
+/* CHOOSE SIZE button */
+
+.dropdown-btn {
+
+  font-family: 'Inria-serif', serif;
+  font-size: 16px;
+
+}
+
+/* QUANTITY BUTTONS */
+.product-qty-btn {
+
+  font-size: 18px;
+}
+
+
+
 
 /* ========== CART  ========== */
+
+
+
 
 
 /* ========== CHECKOUT ========== */
 
 
-/* ========== CONFIRMATION ========== */

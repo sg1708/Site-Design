@@ -203,13 +203,357 @@
       </div>
   </div>
 
+  <main>
+
+    <!-- Search bar -->
+    <div class="search-results-header">
+      <h3>Search Results</h3>
+      <div class="search-results-bar">
+        
+        <span class="search-term">Bedroom</span>
+        
+        <div class="right-icons">
+        <img src="images/cross-icon.svg" alt="Clear" class="clear-icon">
+        <div class="vertical-divider"></div>
+        <button class="search-btn">
+          <img src="images/search-icon.png" alt="Search">
+        </button>
+        </div>
+
+      </div>
+
+    </div>
+    
+
+   
+    
+    <!-- Divider -->
+    <div class="bedroom-title">
+      <hr class="divider">
+    </div>
 
 
-  <h1>Timber Dining Table</h1>
-  <img src="https://via.placeholder.com/300" alt="Timber Table">
-  <p>Beautiful handcrafted dining table made from Australian hardwood.</p>
-  <p>$1,200</p>
-  <button onclick="addToCart()">Add to Cart</button>
+
+    <!-- Mobile Filter Button -->
+    <div class="mobile-filter-btn">
+      <button id="openFilter" class="filter-btn">
+        <img src="images/filtering-icon.svg" alt="Filter Icon">
+        FILTER
+      </button>
+    </div>
+
+    <!-- Mobile Filter Overlay -->
+    <div id="mobileFilterOverlay" class="mobile-filter-overlay">
+      <div class="mobile-filter-header">
+        <button id="closeFilter" class="close-button">×</button>
+      </div>
+
+      <div class="mobile-filter-content">
+
+        <!-- Paste your .filters content here -->
+        <div class="filters">
+
+          <div class="filter-header" data-filter="availability">
+            <h3>Availability</h3>
+            <img src="images/arrow-down.svg">
+          </div>
+           <!-- sidebar hidden -->
+          <div class="filter-options hidden-filter" data-filter-options="availability">
+            <label><input type="checkbox"> In Stock</label>
+            <label><input type="checkbox"> Out of Stock</label>
+          </div>
+  
+  
+          <hr class="divider">
+  
+          <div class="filter-header" data-filter="producttype">
+            <h3>Product Type</h3>
+            <img src="images/arrow-down.svg">
+          </div>
+          <div class="filter-options hidden-filter" data-filter-options="producttype">
+            <label><input type="checkbox"> Beds</label>
+            <label><input type="checkbox"> Tables</label>
+            <label><input type="checkbox"> Bookshelves</label>
+            <label><input type="checkbox"> Lamps</label>
+            <label><input type="checkbox"> Chairs</label>
+            <label><input type="checkbox"> Entertainment Units</label>
+            <label><input type="checkbox"> Side Tables</label>
+          </div>
+  
+          <hr class="divider">
+  
+          <div class="filter-header" data-filter="price">
+            <h3>Price</h3>
+            <img src="images/arrow-down.svg">
+          </div>
+          <div class="filter-options hidden-filter" data-filter-options="price">
+            <label>From <input type="number" placeholder="$0"></label>
+            <label>To <input type="number" placeholder="$6,000.00"></label>
+          </div>
+  
+        </div>
+      </div>
+
+
+      <div class="mobile-filter-actions">
+        <button class="btn">Reset All</button>
+        <button class="btn">Apply</button>
+      </div>
+
+    </div>
+
+
+
+    <!-- sort by filter at top -->
+    <div class="sort-by">
+      <button id="sortToggle" class="sort-btn">
+        Sort by: Relevance <img src="images/arrow-down.svg" class="sort-arrow">
+      </button>
+       <!-- sort by overlay -->
+      <div id="sortOptions" class="sort-options hidden">
+        <p>Relevance</p>
+        <p>Best Selling</p>
+        <p>Price: Low to High</p>
+        <p>Price: High to Low</p>
+      </div>
+    </div>
+  
+
+    <div class="products-layout">
+
+      <!-- Sidebar filters -->
+      <aside class="filters">
+
+        <div class="filter-header" data-filter="availability">
+          <h3>Availability</h3>
+          <img src="images/arrow-down.svg">
+        </div>
+         <!-- sidebar hidden -->
+        <div class="filter-options hidden-filter" data-filter-options="availability">
+          <label><input type="checkbox"> In Stock</label>
+          <label><input type="checkbox"> Out of Stock</label>
+        </div>
+
+
+        <hr class="divider">
+
+        <div class="filter-header" data-filter="producttype">
+          <h3>Product Type</h3>
+          <img src="images/arrow-down.svg">
+        </div>
+        <div class="filter-options hidden-filter" data-filter-options="producttype">
+          <label><input type="checkbox"> Beds</label>
+          <label><input type="checkbox"> Tables</label>
+          <label><input type="checkbox"> Bookshelves</label>
+          <label><input type="checkbox"> Lamps</label>
+          <label><input type="checkbox"> Chairs</label>
+          <label><input type="checkbox"> Entertainment Units</label>
+          <label><input type="checkbox"> Side Tables</label>
+          <label><input type="checkbox"> Desks</label>
+          <label><input type="checkbox"> Suites</label>
+        </div>
+
+        <hr class="divider">
+
+        <div class="filter-header" data-filter="price">
+          <h3>Price</h3>
+          <img src="images/arrow-down.svg">
+        </div>
+        <div class="filter-options hidden-filter" data-filter-options="price">
+          <label>From <input type="number" placeholder="$0"></label>
+          <label>To <input type="number" placeholder="$6,000.00"></label>
+        </div>
+  
+        <button class="btn">Apply</button>
+
+      </aside>
+
+      <span class="reset-all">Reset</span>
+
+  
+      <!-- Product grid -->
+      <section class="products-grid">
+        <div class="product-card">
+          <div class="image-container">
+            <img src="images/bed1.jpg" alt="Queen Bed">
+
+            <div class="product-dots">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+        </div>
+
+
+          <h3>Copenhagen - Queen Bed</h3>
+          <p>$1,199.00</p>
+          <small>American Walnut</small>
+        </div>
+  
+        <div class="product-card">
+          <div class="image-container">
+            <img src="images/table1.jpg" alt="Bedside Table">
+
+            <div class="product-dots">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+        </div>
+
+
+          <h3>Ashmore - Bedside Table</h3>
+          <p>$599.00</p>
+          <small>Victorian Ash Timber</small>
+        </div>
+
+        <!-- Main product clickable link -->
+        <a href="product.html" class="product-link">
+          <div class="product-card">
+            <div class="image-container">
+              <img src="images/bed2.jpg" alt="King Bed">
+
+              <div class="product-dots">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+          </div>
+
+            <h3>Paddington - King/Queen Bed</h3>
+            <p>$1,199.00 - $1,299.00</p>
+            <small>Blackbutt Timber</small>
+          </div>
+      </a>
+
+
+        <div class="product-card">
+          <div class="image-container">
+            <img src="images/table2.jpg" alt="Coffee Table">
+
+            <div class="product-dots">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+        </div>
+
+
+          <h3>Archimedes - Coffee Table</h3>
+          <p>$1,029.00</p>
+          <small>American Oak Timber</small>
+        </div>
+
+
+        <div class="product-card">
+          <div class="image-container">
+            <img src="images/bed3.jpg" alt="Bedroom suite">
+
+            <div class="product-dots">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+        </div>
+
+          <h3>Derwent - 4 Piece Bedroom Suite</h3>
+          <p>$2,899.00 - $2,999.00</p>
+          <small>Blackwood Timber</small>
+        </div>
+
+        <div class="product-card">
+          <div class="image-container">
+            <img src="images/entert.jpg" alt="Entertainment table">
+
+            <div class="product-dots">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+        </div>
+
+
+          <h3>Apollo Bay - Entertainment Unit</h3>
+          <p>$2,690.00</p>
+          <small>Messamate Timber</small>
+        </div>
+
+        <div class="product-card">
+          <div class="image-container">
+            <img src="images/shelf.jpg" alt="Bookshelf">
+
+            <div class="product-dots">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+        </div>
+
+
+          <h3>Anglsea - Cube Bookshelf</h3>
+          <p>$3,599.00</p>
+          <small>Messamate, Blackbutt Timber</small>
+        </div>
+
+
+        <div class="product-card">
+
+          <div class="image-container">
+            <img src="images/desk.jpg" alt="Desk">
+
+            <div class="product-dots">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <h3>Anglsea - Desk</h3>
+          <p>$1,399.00 - $2,699.00</p>
+          <small>Messamate, Blackbutt Timber</small>
+        </div>
+
+        <div class="product-card mobile-hide">
+          <div class="product-card">
+            <div class="image-container">
+              <img src="images/bedtable.jpg" alt="Bedside Table">
+              <img src="images/sale.png" alt="Sale" class="sale-icon">
+
+              <div class="product-dots">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <h3>Anglsea - Bedside Table</h3>
+            <p><strike>$1,999.00</strike>  $999.00</p>
+            <small>Messamate, Blackbutt Timber</small>
+          </div>
+        </div>
+  
+      </section>
+
+    </div>
+  
+    <!-- More pages -->
+    <div class="pages">
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>></button>
+    </div>
+
+  </main>
 
 
 

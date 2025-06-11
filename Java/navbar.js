@@ -18,8 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const cartBtn = document.getElementById('cartBtn');
   const cartBtnMobile = document.getElementById('cartBtnMobile');
-  const closeCart = document.getElementById('closeCart');
-  const cartPopup = document.getElementById('cartPopup');
+
+
+  
 
   // DESKTOP SEARCH
   // Toggle the search overlay (slide it in/out from the top) when search icon is clicked
@@ -84,23 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  // CART
-  // Toggle the visibility of the Cart popup when cart icon is clicked
-
-  if (cartBtn) {
-    cartBtn.addEventListener('click', () => {
-      cartPopup.classList.add('show');
-      document.body.classList.add('dimmed');
-    });
-  }
-
-  if (closeCart) {
-    closeCart.addEventListener('click', () => {
-      cartPopup.classList.remove('show');
-      document.body.classList.remove('dimmed');
-    });
-  }
-
 
   // CLOSE WHEN CLICKING OUTSIDE EACH OVERLAY
 
@@ -132,23 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // CART CLOSE 
-    if (
-      cartPopup && !cartPopup.contains(e.target) && !cartBtn.contains(e.target)
-    && !cartBtnMobile.contains(e.target)) {
-      cartPopup.classList.remove('show');
- 
-    }
-
-    // DIM BACKGROUND FOR OVERLAYS
-    const productsOpen = !popup.classList.contains('hidden');
-    const cartOpen = cartPopup.classList.contains('show');
-    
-    if (productsOpen || cartOpen) {
-      document.body.classList.add('dimmed');
-    } else {
-      document.body.classList.remove('dimmed');
-    }
 
   });
 
@@ -166,9 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Open/close side menu
   menuToggle.addEventListener('click', () => {
-    const isOpen = sideMenu.classList.contains('show');
+    const Open = sideMenu.classList.contains('show');
 
-    if (isOpen) {
+    if (Open) {
       sideMenu.classList.remove('show');
       mobileProductsOverlay.classList.remove('show');
       document.body.classList.remove('no-scroll');
@@ -214,19 +181,63 @@ document.addEventListener('DOMContentLoaded', () => {
     sideMenu.classList.add('show'); // go back to side menu
     updateMenuIcon();
   });
+  
 
 
-  // CART POPUP
 
-  if (cartBtnMobile) {
-    cartBtnMobile.addEventListener('click', () => {
-      cartPopup.classList.add('show');
-      document.body.classList.add('dimmed');
+
+  // OPEN CART (grouped with nav cart icon and 'add to cart' on product page)
+  // Toggle the visibility of the Cart popup when cart icon or 'add to cart' is clicked
+
+  const cartPopup = document.getElementById('cartPopup');
+  const cartBtns = document.querySelectorAll('#cartBtn, #cartBtnMobile, #addToCart');
+  const closeCart = document.getElementById('closeCart');
+
+  if (cartPopup) {
+    cartBtns.forEach(btn => {
+      if (btn) {
+        btn.addEventListener('click', () => {
+          cartPopup.classList.add('show');
+          document.body.classList.add('dimmed');
+        });
+      }
+    });
+
+    if (closeCart) {
+      closeCart.addEventListener('click', () => {
+        cartPopup.classList.remove('show');
+        document.body.classList.remove('dimmed');
+      });
+    }
+
+    // close when clicking outside overlay 
+    document.addEventListener('click', (e) => {
+      const ClickInsideCart = cartPopup.contains(e.target);
+      const ClickOnButton = Array.from(cartBtns).some(btn => btn.contains(e.target));
+      
+      if (!ClickInsideCart && !ClickOnButton) {
+        cartPopup.classList.remove('show');
+       
+      }
+
+
+      // Check if any overlaystill open before removing dimmed
+      const anyOverlayOpen = 
+      cartPopup.classList.contains('show') ||
+      !popup.classList.contains('hidden');
+
+      if (!anyOverlayOpen) {
+        document.body.classList.remove('dimmed');
+      }
+
+
     });
   }
 
 
 });
+
+
 
 
 

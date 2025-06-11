@@ -1,5 +1,6 @@
 
 
+
 /* ========== HOMEPAGE ========== */
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -10,13 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // when clicking left/right arrows, scroll a bit to left and right
-  leftArrow.addEventListener('click', () => {
-    galleryScroll.scrollBy({ left: -300, behavior: 'smooth' });
-  });
+  if (leftArrow) {
+    leftArrow.addEventListener('click', () => {
+      galleryScroll.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+  }
 
-  rightArrow.addEventListener('click', () => {
-    galleryScroll.scrollBy({ left: 300, behavior: 'smooth' });
+  if (rightArrow) {
+    rightArrow.addEventListener('click', () => {
+      galleryScroll.scrollBy({ left: 300, behavior: 'smooth' });
+  
   });
+ }
     
 
   // TESTIMONIALS CHANGING
@@ -48,17 +54,19 @@ document.addEventListener('DOMContentLoaded', () => {
     image.src = testimonials[index].image;
   }
 
-  // Left arrow click change testimonial
-  testleftArrow.addEventListener('click', () => {
-    current = (current - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(current);
-  });
-
-  // Right arrow click change testimonial
-  testrightArrow.addEventListener('click', () => {
-    current = (current + 1) % testimonials.length;
-    showTestimonial(current);
-  });
+  if (testleftArrow && testrightArrow) {
+    // Left arrow click change testimonial
+    testleftArrow.addEventListener('click', () => {
+      current = (current - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(current);
+    });
+  
+    // Right arrow click change testimonial
+    testrightArrow.addEventListener('click', () => {
+      current = (current + 1) % testimonials.length;
+      showTestimonial(current);
+    });
+  }
 
 });
 
@@ -72,10 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const sortToggle = document.getElementById('sortToggle');
   const sortOptions = document.getElementById('sortOptions');
 
-  sortToggle.addEventListener('click', () => {
-    sortOptions.classList.toggle('hidden');
-  });
-
+  if (sortToggle) {
+    sortToggle.addEventListener('click', () => {
+      sortOptions.classList.toggle('hidden');
+    });
+  } 
 
 
   // SORT FILTERS (ON MOBILE & DESKTOP)
@@ -112,32 +121,157 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeFilter = document.getElementById('closeFilter');
   const mobileFilterOverlay = document.getElementById('mobileFilterOverlay');
 
-  openFilter.addEventListener('click', () => {
-    mobileFilterOverlay.classList.add('show');
-    document.body.classList.add('no-scroll');
-  });
-
-  closeFilter.addEventListener('click', () => {
-    mobileFilterOverlay.classList.remove('show');
-    document.body.classList.remove('no-scroll');
-  });
-
+  if (openFilter && closeFilter && mobileFilterOverlay) {
+    openFilter.addEventListener('click', () => {
+      mobileFilterOverlay.classList.add('show');
+      document.body.classList.add('no-scroll');
+    });
+  
+    closeFilter.addEventListener('click', () => {
+      mobileFilterOverlay.classList.remove('show');
+      document.body.classList.remove('no-scroll');
+    });
+  }
 
 });
 
 
 
-/* ========== PRODUCT 2 PAGE ========== */
 
 
 
 /* ========== INDIVIDUAL PRODUCT PAGE ========== */
 
-  // This function is used on the PRODUCT PAGE
-  // When "Add to Cart" is clicked, it shows an alert box
-  function addToCart() {
-    alert("Product added to cart!");
+document.addEventListener('DOMContentLoaded', () => {
+
+  // SIZE DROPDOWN TOGGLE
+  const sizeToggle = document.getElementById('sizeToggle');
+  const sizeOptions = document.getElementById('sizeOptions');
+
+  // Open/close size dropdown 
+  if (sizeToggle && sizeOptions) {
+    sizeToggle.addEventListener('click', () => {
+      sizeOptions.classList.toggle('hidden');
+    });
   }
+
+  // PRODUCT QUANTITY BUTTONS (ON PRODUCT PAGE) 
+  const qtyCount = document.getElementById('qtyCount');
+  const productQtyBtns = document.querySelectorAll('.product-qty-btn');
+
+  // increment/decrement item quantity
+  if (qtyCount) {
+    productQtyBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+
+        let count = parseInt(qtyCount.textContent);
+
+        if (btn.textContent === '−' && count > 1) 
+          count--;
+        if (btn.textContent === '+') 
+          count++;
+
+        qtyCount.textContent = count;
+
+      });
+    });
+}
+
+
+  // DESCRIPTION & MEASUREMENTS SECTIONS
+  const sectionHeaders = document.querySelectorAll('.section-header');
+
+  // open/close section and swap icon
+
+  sectionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const sectionName = header.dataset.section;
+      const content = document.getElementById(sectionName + 'Content');
+      const icon = header.querySelector('.section-icon');
+
+      if (content) {
+        content.classList.toggle('hidden');
+
+        if (content.classList.contains('hidden')) {
+          icon.src = 'images/plus.svg';
+        } 
+        else {
+          icon.src = 'images/minus.svg';
+        }
+      }
+
+    });
+
+  });
+
+
+  // QUANTITY BUTTONS IN CART SIDEBAR
+  const cartQty = document.getElementById("cartQty");
+  const cartPlus = document.getElementById("cartPlus");
+  const cartMinus = document.getElementById("cartMinus");
+
+
+  // Increment/decrement quantity inside cart popup
+  if (cartQty && cartPlus && cartMinus) {
+    cartPlus.addEventListener("click", () => {
+      cartQty.textContent = parseInt(cartQty.textContent) + 1;
+    });
+
+    cartMinus.addEventListener("click", () => {
+      if (parseInt(cartQty.textContent) > 1) {
+        cartQty.textContent = parseInt(cartQty.textContent) - 1;
+      }
+    });
+  }
+
+  // PRODUCT IMAGE GALLERY CHANGE
+
+  const mainImage = document.getElementById('mainProductImage');
+  const thumbs = document.querySelectorAll('.thumb');
+  const prevBtn = document.getElementById('prevImage');
+  const nextBtn = document.getElementById('nextImage');
+
+  // current image index
+  let currentIndex = 0;  
+
+  // Function to update main image and active thumbnail
+    function updateMainImage(index) {
+      mainImage.src = thumbs[index].src;
+
+      // goes through all thumbnails to mark active
+      thumbs.forEach(img => img.classList.remove('active'));
+      thumbs[index].classList.add('active');
+      currentIndex = index;
+    }
+
+  
+  if (mainImage && thumbs.length) {
+
+  
+    // when a thumbnail is clicked show it in the main image
+    thumbs.forEach((thumb, index) => {
+      thumb.addEventListener('click', () => updateMainImage(index));
+    });
+
+    // Previous arrow button, go back one image
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        let newIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+        updateMainImage(newIndex);
+      });
+    }
+
+    // next arrow button, go forward one image
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        let newIndex = (currentIndex + 1) % thumbs.length;
+        updateMainImage(newIndex);
+      });
+    }
+  }
+
+});
+
 
 
 
@@ -146,3 +280,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ========== CHECKOUT PAGE ========== */
+

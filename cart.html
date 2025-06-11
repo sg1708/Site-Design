@@ -203,13 +203,59 @@
   </div>
 
 
+ 
 
-
-  <h1>Your Cart</h1>
-  <p>1x Timber Dining Table — $1,200</p>
-  <a href="checkout.html" class="btn">Proceed to Checkout</a>
-
-
+  <main class="cart-page">
+      <div class="cart-header">
+        <h2>Cart</h2>
+        <span>1 ITEM</span>
+      </div>
+    
+      <div class="cart-content">
+    
+        <!-- Left: Cart Items -->
+        <div class="cart-item">
+          <img src="images/bed2.jpg" alt="Paddington Bed" class="cart-thumb">
+          <div class="cart-details">
+            <div class="cart-text">
+              <h4>Paddington - King/Queen Bed</h4>
+              <p class="subtitle">Australian Blackbutt Timber</p>
+              <div class="cart-controls">
+                <div class="cart-quantity">
+                  <button class="qty-btn">−</button>
+                  <span>1</span>
+                  <button class="qty-btn">+</button>
+                </div>
+                <button class="remove-btn">Remove</button>
+              </div>
+            </div>
+            <div class="cart-price">$1,199.00</div>
+          </div>
+        </div>
+        <hr>
+        
+    
+        <!-- Right: Order Summary -->
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <div class="summary-row">
+            <span>Price</span>
+            <span>$1,199.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Discount</span>
+            <span>$0.00</span>
+          </div>
+          <hr>
+          <a href="checkout.html" class="checkout-btn">
+            <img src="images/lock-icon.svg" alt="Lock" class="lock-icon"> Proceed to Checkout
+          </a>
+        </div>
+    
+      </div>
+  </main>
+    
+    
 
   <!-- FOOTER SECTION -->
   <footer class="site-footer">

@@ -122,12 +122,51 @@
     </div>
     
 
-    <!--empty cart bar-->
+    <!--filled cart bar -->
     <div id="cartPopup" class="cart-popup">
+
         <button id="closeCart" class="cart-close">×</button>
-        <h2>Your Cart is Empty</h2>
+        <h2>In Your Cart (1)</h2>
         <hr class="divider">
-        <a href="explorecollec.html" class="btn">Return to Shop</a>
+      
+        <div class="cart-item">
+          <img src="images/bed2.jpg" alt="Paddington Bed" class="cart-thumb">
+          <div class="cart-item-details">
+            <h4>Paddington - King/Queen Bed</h4>
+            <p>$1,199.00 - 1,299.00</p>
+
+            <div class="cart-controls">
+              <div class="cart-quantity">
+                <button id="cartMinus" class="qty-btn">−</button>
+                <span id="cartQty">1</span>
+                <button id="cartPlus" class="qty-btn">+</button>
+              </div>
+              <button class="remove-btn">REMOVE</button>
+            </div>
+
+          </div>
+        </div>
+      
+        <hr class="divider">
+        
+        <div class="cart-footer">
+            <div class="discount-row">
+            <span>Discount:</span>
+            <button class="discount-btn">ADD</button>
+            </div>
+        
+            <div class="total-row">
+            <span>Total:</span>
+            <span class="cart-total-price">$1,199.00</span>
+            </div>
+
+        
+            <a href="cart.html" class="btn">
+            <img src="images/lock-icon.svg" alt="Lock" class="lock-icon"> Secure Checkout
+            </a>
+
+        </div>
+
     </div>
 
 
@@ -204,14 +243,124 @@
     </div>
 
 
+    <main>
+    <!-- home, bedroom small nav -->
+    <div class="small-nav">
+        <a href="index.html">Home</a> >
+        <a href="products1.html">Bedroom</a>
+  
+    </div>
+
+    </main>
+
+    <main class="product-main">
 
 
-    <h1>Timber Dining Table</h1>
-    <img src="https://via.placeholder.com/300" alt="Timber Table">
-    <p>Beautiful handcrafted dining table made from Australian hardwood.</p>
-    <p>$1,200</p>
-    <button onclick="addToCart()">Add to Cart</button>
+        <!-- Product Image and Thumbnails -->
+        <div class="product-images">
+            <div class="main-image">
+            <img id="mainProductImage" src="images/bed2.jpg" alt="Product Image">
+            <button class="product-arrow left" id="prevImage">
+                <img src="images/arrow-left.svg" alt="Prev">
+            </button>
+            <button class="product-arrow right" id="nextImage">
+                <img src="images/arrow-right.svg" alt="Next">
+            </button>
+            </div>
 
+            <div class="thumbnail-images">
+            <img src="images/bed2.jpg" alt="Thumbnail 1" class="thumb active">
+            <img src="images/product2.jpg" alt="Thumbnail 2" class="thumb">
+            <img src="images/product3.jpg" alt="Thumbnail 3" class="thumb">
+            <img src="images/product4.jpg" alt="Thumbnail 4" class="thumb">
+            </div>
+        </div>
+
+
+        <!-- Product Info -->
+        <div class="product-details">
+
+            <h1 class="product-title">Paddington Bed – Australian Blackbutt Timber – Queen or King Size</h1>
+            <p class="product-price">$1,199.00 – 1,299.00</p>
+            <p class="product-summary">
+            A premium bed frame crafted from beautiful Australian Blackbutt Timber, showcasing a refined mid-century Scandinavian design.
+            </p>
+
+
+        <!-- Choose Size -->
+        <div class="size-dropdown">
+            <button id="sizeToggle" class="dropdown-btn">
+              Choose Size <img src="images/arrow-down.svg" class="dropdown-arrow">
+            </button>
+            <div id="sizeOptions" class="dropdown-options hidden">
+              <p>Queen</p>
+              <p>King</p>
+            </div>
+          </div>
+
+
+        <!-- Quantity & Add to Cart -->
+
+        <div class="quantity-controls">
+            <button class="product-qty-btn">−</button>
+            <span id="qtyCount">1</span>
+            <button class="product-qty-btn">+</button>
+            <button id="addToCart" class="btn">Add to Cart</button>
+        </div>
+          
+
+
+
+        <!-- Description / Measurements -->
+        <div class="product-section">
+            <div class="section-header" data-section="desc">
+              <h3>Description</h3>
+              <img src="images/plus.svg" class="section-icon">
+            </div>
+            <div class="section-content hidden" id="descContent">
+              <p>A premium bed frame crafted from beautiful Australian Blackbutt Timber, 
+                showcasing a refined mid-century Scandinavian design.
+
+                Available in Queen or King sizes.
+                
+                Complete the look with matching bedside tables, dresser with mirror, 
+                and tallboy — available individually or as part of a value package.</p>
+            </div>
+          </div>
+          
+          <div class="product-section">
+            <div class="section-header" data-section="measure">
+              <h3>Measurement/Dimension</h3>
+              <img src="images/plus.svg" class="section-icon">
+            </div>
+            <div class="section-content hidden" id="measureContent">
+                <div class="measurement-details">
+                    <h4>Queen Bed Frame</h4>
+                    <ul>
+                      <li>Length: 2200mm</li>
+                      <li>Width: 1740mm</li>
+                      <li>Headboard Height: 1200mm</li>
+                      <li>Footboard Height: 450mm</li>
+
+                    </ul>
+                  
+                    <h4>King Bed Frame</h4>
+                    <ul>
+                      <li>Length: 2200mm</li>
+                      <li>Width: 2040mm</li>
+                      <li>Headboard Height: 1200mm</li>
+                      <li>Footboard Height: 450mm</li>
+
+                    </ul>
+                </div>
+            </div>
+          </div>
+          
+          
+
+
+    </main>
+    
 
     <!-- FOOTER SECTION -->
     <footer class="site-footer">

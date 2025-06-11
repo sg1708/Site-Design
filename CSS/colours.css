@@ -115,11 +115,6 @@ body {
 
 
 
-/* ========== EXPLORE COLLECTIONS ========== */
-
-
-
-
 
 /* ========== PRODUCTS 1 PAGE ========== */
 
@@ -229,8 +224,52 @@ body {
 .filter-btn {
   background:#D6D5D5;
 
+  border: 1px solid #948A80;
+
+}
+
+
+
+
+/* ========== PRODUCT PAGE ========== */
+
+/* PRODUCTS */
+
+/* THUMBNAIL images border*/
+
+.thumbnail-images img.active {
+  border-color: #E2A66A;
+}
+
+/* CHOOSE SIZE button */
+.dropdown-btn {
+  background: white;
   border: 1px solid black;
 
+}
+
+.dropdown-btn:hover {
+  background:  #D9D9D9;
+}
+
+
+.dropdown-options {
+  background: white;
+  border: 1px solid #ccc;
+
+}
+
+.dropdown-options p:hover {
+  background: #EEE;
+}
+
+
+/* QUANTITY BUTTONS */
+
+.product-qty-btn {
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 18px;
 }
 
 
@@ -238,11 +277,9 @@ body {
 
 
 
-/* ========== PRODUCTS 2 PAGE ========== */
 
 
 
-/* ========== PRODUCT PAGE ========== */
 
 
 /* ========== CART  ========== */
