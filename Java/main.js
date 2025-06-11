@@ -1,6 +1,5 @@
 
 
-
 /* ========== HOMEPAGE ========== */
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -275,14 +274,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-  /* ========== CART PAGE ========== */
-
-
-
-
-
-  
-
   /* ========== CHECKOUT PAGE ========== */
 
+
+
+  // PLACE ORDER BUTTON, show when clicking tick box
+
+  document.addEventListener('DOMContentLoaded', () => {
+
+    const placeOrderBtn = document.getElementById('placeOrderBtn');
+    const termsCheckbox = document.getElementById('termsCheckbox');
+
+    termsCheckbox.addEventListener('change', () => {
+      if (termsCheckbox.checked) {
+        placeOrderBtn.classList.remove('disabled-link');
+      } else {
+        placeOrderBtn.classList.add('disabled-link');
+      }
+    });
+
+
+
+
+  });

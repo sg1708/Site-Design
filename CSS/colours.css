@@ -280,14 +280,41 @@ body {
 
 
 
-
-
-
-
 /* ========== CART  ========== */
+
+/* ORDER SUMMARY */
+.order-summary {
+
+  border: 1px solid #ccc;
+
+  background: #fff;
+
+}
+
+/* cart checkout button */
+.checkout-btn {
+  background: #E2A66A;
+  color: white;
+
+  font-family: 'Inria-serif', serif;
+  font-size: 20px;
+
+
+}
+
+
+.checkout-btn:hover {
+  background-color: #a47738;
+
+}
 
 
 /* ========== CHECKOUT ========== */
+
+
+
+
+
 
 
 /* ========== CONFIRMATION ========== */
